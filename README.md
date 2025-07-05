@@ -75,12 +75,10 @@ Assertions describe the expectations that will be evaluated against the model’
 
 ```txt
 .
-├── sdk/           # SDKs and CLI tools
-│   ├── ts/        # TypeScript packages (managed by pnpm)
-│   │   ├── core/  # Core logic, types, assertions, prompt interface, use for building custom clients
-│   │   ├── node/  # Node.js runtime client
-│   │   ├── web/   # Browser/Edge runtime client
-│   ├── go/        # Go SDK and CLI
+├── packages/   # Typescript packages (managed by pnpm)
+│   ├── core/   # Core logic, types, assertions, prompt interface, use for building custom clients
+│   ├── node/   # Node.js runtime client
+│   ├── web/    # Browser/Edge runtime client
 ```
 
 ---
@@ -90,11 +88,10 @@ Assertions describe the expectations that will be evaluated against the model’
 ### Prerequisites
 
 - Node.js + pnpm
-- Go (for CLI development)
 
 ### TypeScript SDK
 
-From the `ts` directory, run:
+run:
 
 #### Install
 
@@ -192,7 +189,7 @@ The Go SDK provides a CLI and Go package for working with `.spec.md` files.
 #### Install (CLI)
 
 ```bash
-go install github.com/specform/specform/sdk/go/cmd/specform@latest
+go install github.com/specform/go-sdk/cmd@latest
 ```
 
 #### Compile Prompt Specs
@@ -225,7 +222,7 @@ specform snapshot --prompt build/my-prompt.prompt.json --output output.txt --out
 specform serve --dir build --port 8080
 ```
 
-See the [Go SDK README](./sdk/go/README.md) for full usage.
+See the [Go SDK README](https://github.com/specform/go-sdk/blog/main/README.md) for full usage.
 
 ---
 
