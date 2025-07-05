@@ -1,0 +1,27 @@
+# Node / pnpm
+node_modules/
+pnpm-lock.yaml
+dist/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Vitest
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+
+# Output from CLI/test snapshots (if stored)
+.snapshots/

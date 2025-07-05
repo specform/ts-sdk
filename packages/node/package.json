@@ -1,0 +1,26 @@
+{
+  "name": "@specform/node",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@specform/core": "workspace:*"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc -p ."
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.15.17"
+  }
+}
