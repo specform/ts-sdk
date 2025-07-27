@@ -4,8 +4,10 @@ import { fetchPromptLoader, fetchSnapshotLoader } from "../web";
 import { createPromptClient } from "@specform/core";
 
 const prompt = {
-  id: "sample",
+  id: "sample-hash123",
   hash: "abc123",
+  title: "Sample Prompt",
+  slug: "sample-prompt",
   scenario: "Sample",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name"],
@@ -40,7 +42,7 @@ describe("fetch loaders", () => {
 
     const loader = fetchPromptLoader("https://example.com/prompts");
     const result = await loader("sample");
-    expect(result.id).toBe("sample");
+    expect(result.id).toBe("sample-hash123");
   });
 
   it("loads snapshot via fetch", async () => {

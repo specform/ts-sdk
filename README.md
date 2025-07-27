@@ -1,3 +1,5 @@
+![status](https://img.shields.io/badge/status-active--development-orange)
+
 # Specform
 
 This is the monorepo for `Specform`, a language-agnostic prompt specification framework for testing, evaluating, and deploying LLM prompts.
@@ -5,6 +7,8 @@ This is the monorepo for `Specform`, a language-agnostic prompt specification fr
 ## What is Specform?
 
 Specform is a framework for defining, testing, and deploying prompts for large language models (LLMs). It allows you to create declarative prompt specifications that can be version-controlled and shared across different programming languages and runtimes.
+
+> **Heads up**: If you previously relied on the `scenario` field or flat compiled output, you'll need to update to use the new `title`/`slug`/`id` structure.
 
 ### Features
 

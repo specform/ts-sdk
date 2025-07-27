@@ -8,7 +8,9 @@ export type CompiledPrompt<
 > = {
   id: string;
   hash: string;
-  scenario: string;
+  title: string;
+  slug: string;
+  description?: string;
   compiledPrompt: string;
   inputs: (keyof TInputs)[];
   defaultInputs?: Partial<TInputs>;

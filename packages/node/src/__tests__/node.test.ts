@@ -8,8 +8,10 @@ const fixturePromptPath = path.join(fixtureDir, "sample.spec.json");
 const fixtureSnapshotPath = path.join(fixtureDir, "sample.snap.json");
 
 const fixturePrompt = {
-  id: "sample",
+  id: "sample-hash123",
   hash: "hash123",
+  title: "Sample Prompt",
+  slug: "sample-prompt",
   scenario: "Sample Scenario",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name"],
@@ -40,7 +42,7 @@ describe("Node loader (test-local)", () => {
 
   it("loads a compiled prompt from disk", async () => {
     const prompt = await nodePromptLoader("sample");
-    expect(prompt.id).toBe("sample");
+    expect(prompt.id).toBe("sample-hash123");
     expect(prompt.defaultInputs?.name).toBe("Brad");
   });
 

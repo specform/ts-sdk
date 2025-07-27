@@ -1,19 +1,19 @@
 import { describe, vi, it, expect } from "vitest";
-import { PromptLoader, SnapshotLoader, createPromptClient } from "../client";
 import { Prompt } from "../prompt";
 import { CompiledPrompt, Snapshot } from "../types";
 import { AssertionRegistry } from "../assert";
 
 const MOCK_PROMPT: CompiledPrompt<{ name: string }> = {
-  id: "test-id",
+  id: "test-id-abc123",
+  slug: "test-prompt",
   hash: "abc123",
-  scenario: "Test Prompt",
+  title: "Test Prompt",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name" as const],
 };
 
 const MOCK_SNAPSHOT: Snapshot = {
-  id: "test-id-snap",
+  id: "test-id-abc123-snap",
   hash: "abc123",
   promptId: "test-id",
   promptHash: "abc123",
@@ -72,9 +72,9 @@ describe("Prompt", () => {
       save: true,
     });
 
-    expect(snapshot.id).toBe("test-id-snap");
+    expect(snapshot.id).toBe("test-id-abc123-snap");
     expect(snapshot.hash).toBe("abc123");
-    expect(snapshot.promptId).toBe("test-id");
+    expect(snapshot.promptId).toBe("test-id-abc123");
     expect(snapshot.promptHash).toBe("abc123");
     expect(snapshot.output).toBe("Hi Willie Nelson");
     expect(snapshot.inputs).toEqual({ name: "Willie Nelson" });
