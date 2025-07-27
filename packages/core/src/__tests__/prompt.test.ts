@@ -5,9 +5,10 @@ import { CompiledPrompt, Snapshot } from "../types";
 import { AssertionRegistry } from "../assert";
 
 const MOCK_PROMPT: CompiledPrompt<{ name: string }> = {
-  id: "test-id",
+  id: "test-id-acb123",
+  slug: "test-prompt",
   hash: "abc123",
-  scenario: "Test Prompt",
+  title: "Test Prompt",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name" as const],
 };

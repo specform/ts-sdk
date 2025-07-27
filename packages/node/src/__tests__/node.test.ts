@@ -8,8 +8,10 @@ const fixturePromptPath = path.join(fixtureDir, "sample.spec.json");
 const fixtureSnapshotPath = path.join(fixtureDir, "sample.snap.json");
 
 const fixturePrompt = {
-  id: "sample",
+  id: "sample-hash123",
   hash: "hash123",
+  title: "Sample Prompt",
+  slug: "sample-prompt",
   scenario: "Sample Scenario",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name"],

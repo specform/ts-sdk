@@ -3,9 +3,10 @@ import { renderCompiledPrompt } from "../render";
 import type { CompiledPrompt } from "../types";
 
 const mockScenario: CompiledPrompt<{ name: string }> = {
-  id: "greet-user",
+  id: "greet-user-abc123",
   hash: "abc123",
-  scenario: "Greet a user by name",
+  slug: "greet-user",
+  title: "Greet a user by name",
   compiledPrompt: "Hello, {{name}}!",
   inputs: ["name"],
   defaultInputs: {},

@@ -1,5 +1,5 @@
-import { describe, test, expect, beforeEach, afterEach, it } from "vitest";
-import { AssertionRegistry, createRegistry } from "../assert";
+import { describe, test, expect, it } from "vitest";
+import { createRegistry } from "../assert";
 import type { Assertion } from "../types";
 
 const output = "Webhooks allow real-time HTTP communication between systems.";

@@ -1,12 +1,12 @@
 import { describe, it, expect, vi } from "vitest";
 import { createPromptClient, PromptLoader, SnapshotLoader } from "../client";
-import { Prompt } from "../prompt";
 import type { CompiledPrompt, Snapshot } from "../types";
 
 const MOCK_PROMPT: CompiledPrompt = {
-  id: "test-id",
+  id: "test-id-acb123",
   hash: "abc123",
-  scenario: "Test Prompt",
+  title: "Test Prompt",
+  slug: "test-prompt",
   compiledPrompt: "Hi {{name}}",
   inputs: ["name"],
 };
