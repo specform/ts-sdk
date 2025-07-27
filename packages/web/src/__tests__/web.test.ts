@@ -42,7 +42,7 @@ describe("fetch loaders", () => {
 
     const loader = fetchPromptLoader("https://example.com/prompts");
     const result = await loader("sample");
-    expect(result.id).toBe("sample");
+    expect(result.id).toBe("sample-hash123");
   });
 
   it("loads snapshot via fetch", async () => {

@@ -42,7 +42,7 @@ describe("Node loader (test-local)", () => {
 
   it("loads a compiled prompt from disk", async () => {
     const prompt = await nodePromptLoader("sample");
-    expect(prompt.id).toBe("sample");
+    expect(prompt.id).toBe("sample-hash123");
     expect(prompt.defaultInputs?.name).toBe("Brad");
   });
 
